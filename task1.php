@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $name = 'matej';
 $arrName = str_split($name);
@@ -15,3 +16,6 @@ for ($i=0; $i < count($arrName) ; $i++) {
     }
     echo '<br>';
 }
+
+$content = ob_get_clean();
+include 'index.php';

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $alphabet = range('a', 'z');
 $result=[];
@@ -39,3 +40,5 @@ for ($i=0; $i < count($result) ; $i++) {
     echo '<br>';
 }
 
+$content = ob_get_clean();
+include 'index.php';
